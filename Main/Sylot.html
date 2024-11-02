@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sylheti Tales</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Background and Font Styling */
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Logo Title */
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 1.5rem;
+            align-self: flex-start;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        }
+
+        /* Custom Menu Icon */
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #4CAF50;
+            cursor: pointer;
+        }
+
+        .menu-container:hover {
+            color: #2e7d32;
+        }
+
+        .menu-dropdown {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 150px;
+            text-align: center;
+        }
+
+        .menu-dropdown a {
+            padding: 0.8rem;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-dropdown a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Section Styling */
+        section {
+            display: none;
+            width: 90%;
+            max-width: 800px;
+            padding: 2rem;
+            margin: 2rem 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Home section is visible by default */
+        #home {
+            display: block;
+            text-align: center;
+            background-image: url('https://via.placeholder.com/1600x900'); /* Dummy image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            padding: 4rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Overlay for text readability */
+        #home .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+        }
+
+        #home .content {
+            position: relative;
+            z-index: 1;
+            padding: 1.5rem;
+            color: #f1f1f1;
+        }
+
+        #home h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Transliteration Tool Styling */
+        #transliterate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .translit-box {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .translit-box textarea {
+            width: 100%;
+            height: 150px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            border: 2px solid #4CAF50;
+            background-color: #f0f0f0;
+            resize: none;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 600px) {
+            .menu-dropdown {
+                width: 100px;
+            }
+
+            #home h1 {
+                font-size: 2rem;
+            }
+
+            #home p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Title -->
+    <div class="logo">The Sylheti Tales</div>
+
+    <!-- Custom Menu Icon -->
+    <div class="menu-container" onclick="toggleMenu()">&#9776; <!-- Unicode for Menu Icon -->
+    </div>
+    <div class="menu-dropdown" id="menuDropdown">
+        <a href="#" onclick="showSection('learn')">Learn</a>
+        <a href="#" onclick="showSection('transliterate')">Transliterate</a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>History of Sylhet Nagri</h1>
+            <p>
+                Sylhet Nagri, also known as Sylheti Nagri, is an ancient script that has been integral to the culture and heritage of the Sylhet region in Bangladesh. 
+                Dating back centuries, it was used primarily for writing poetic and literary works, preserving folk stories and spiritual texts. 
+                The script's simplicity and phonetic structure made it accessible to the local population, and it holds significant cultural and historical value.
+                Through Sylhet Nagri, generations have conveyed stories, emotions, and history, connecting communities with a sense of shared identity and heritage.
+            </p>
+        </div>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn">
+        <h2>Learn About Sylhet Nagri</h2>
+        <p>The Sylhet Nagri script is a phonetic alphabet unique to the Sylhet region, holding historical significance and cultural identity.</p>
+        <img src="https://via.placeholder.com/600x300" alt="Sylhet Nagri script example">
+    </section>
+
+    <!-- Transliteration Section -->
+    <section id="transliterate">
+        <h2>Transliterate</h2>
+        <div class="translit-box">
+            <textarea id="nagriInput" placeholder="Nagri"></textarea>
+            <textarea id="banglaOutput" placeholder="Bangla" readonly></textarea>
+        </div>
+    </section>
+
+    <script>
+        // Toggle the dropdown menu
+        function toggleMenu() {
+            const menu = document.getElementById('menuDropdown');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Show selected section and hide others
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => section.style.display = "none");
+            document.getElementById(sectionId).style.display = "block";
+            toggleMenu(); // Close the menu after selecting
+        }
+
+        // Dummy transliteration function
+        document.getElementById("nagriInput").addEventListener("input", function() {
+            const input = document.getElementById("nagriInput").value;
+            document.getElementById("banglaOutput").value = input;  // Placeholder to directly copy input for now
+        });
+    </script>
+
+</body>
+</html>
