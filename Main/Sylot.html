@@ -138,7 +138,7 @@
             flex-direction: row;
             gap: 2rem;
             width: 100%;
-            max-width: 700px;
+            min-height: 450px;
         }
 
         .translit-box textarea {
@@ -184,12 +184,12 @@
 </head>
 <body>
 
-    <a href="#" class="logo" onclick="showSection('home')">The Sylheti Tales</a>
+    <a class="logo" onclick="showSection('home')">The Sylheti Tales</a>
 
     <div class="menu-container" onclick="toggleMenu()">&#9776;</div>
     <div class="menu-dropdown" id="menuDropdown">
-        <a href="#" onclick="showSection('learn')">Learn</a>
-        <a href="#" onclick="showSection('transliterate')">Transliterate</a>
+        <a onclick="showSection('learn')">Learn</a>
+        <a onclick="showSection('transliterate')">Transliterate</a>
     </div>
 
     <section id="home">
@@ -206,15 +206,19 @@
     <section id="learn">
         <h2>Learn About Sylhet Nagri</h2>
         <p>The Sylhet Nagri script is a phonetic alphabet unique to the Sylhet region, holding historical significance and cultural identity.</p>
-        <img src="https://via.placeholder.com/600x300" alt="Sylhet Nagri script example">
+        <img src="./alphabet.jpg" alt="Sylhet Nagri script example 1">
+        <img src="./Alphabet 2.jpg" alt="Sylhet Nagri script example 2">
     </section>
 
     <section id="transliterate">
         <h2>Transliterate</h2>
-        <div class="translit-box">
+        <iframe class="translit-box" src="https://syloti.app/" title="Transliterate"></iframe>
+
+        <!-- <div class="translit-box">
             <textarea id="nagriInput" placeholder="Nagri"></textarea>
             <textarea id="banglaOutput" placeholder="Bangla" readonly></textarea>
-        </div>
+        </div> -->
+
     </section>
 
     <script>
@@ -227,6 +231,8 @@
             const sections = document.querySelectorAll("section");
             sections.forEach(section => section.style.display = "none");
             document.getElementById(sectionId).style.display = "block";
+
+            sectionId == 'home'? document.getElementById('transliterate').style.display = "block" : '';
             toggleMenu();
         }
 
