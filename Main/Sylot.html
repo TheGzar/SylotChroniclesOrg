@@ -64,6 +64,7 @@
             color: #004D40;
             display: block;
             border-bottom: 1px solid #004D40;
+            z-index: 2;
         }
 
         .menu-dropdown a:hover {
@@ -72,15 +73,17 @@
         }
 
         section {
+            text-align: center;
             display: none;
             width: 90%;
-            max-width: 800px;
             padding: 2rem;
             margin: 2rem 0;
             background-color: #E0F2F1;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 77, 64, 0.2);
             color: #004D40;
+            max-width: 1450px;
+            z-index: 1;
         }
 
         #home {
@@ -153,6 +156,11 @@
             resize: none;
         }
 
+        img {
+            width: 500px;
+            margin-top: 10px;
+        }
+
         /* Mobile-Specific Styles */
         @media (max-width: 600px) {
             /* Reduce logo and text size for smaller screens */
@@ -178,6 +186,9 @@
             /* Add more padding to menu items for easier tapping */
             .menu-dropdown a {
                 padding: 1.2rem;
+            }
+            img {
+                width: 100%;
             }
         }
     </style>
@@ -206,19 +217,17 @@
     <section id="learn">
         <h2>Learn About Sylhet Nagri</h2>
         <p>The Sylhet Nagri script is a phonetic alphabet unique to the Sylhet region, holding historical significance and cultural identity.</p>
-        <img src="./alphabet.jpg" alt="Sylhet Nagri script example 1">
-        <img src="./Alphabet 2.jpg" alt="Sylhet Nagri script example 2">
+        <img src="./alphabet.bmp" alt="Sylhet Nagri script example 1">
+        <img src="./Alphabet 2.bmp" alt="Sylhet Nagri script example 2">
     </section>
 
     <section id="transliterate">
         <h2>Transliterate</h2>
         <iframe class="translit-box" src="https://syloti.app/" title="Transliterate"></iframe>
-
         <!-- <div class="translit-box">
             <textarea id="nagriInput" placeholder="Nagri"></textarea>
             <textarea id="banglaOutput" placeholder="Bangla" readonly></textarea>
         </div> -->
-
     </section>
 
     <script>
