@@ -145,20 +145,6 @@ section {
     text-align: justify;
 }
 
-#about {
-    line-height: 150%;
-    color: rgb(0, 141, 71)
-}
-
-#about h3 {
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-#about ul {
-    list-style-type: none;
-}
-
 #transliterate {
     display: flex;
     flex-direction: column;
@@ -184,6 +170,20 @@ section {
     background-color: #E1F5FE;
     color: #004D40;
     resize: none;
+}
+
+#about, #learn, #transliterate {
+    line-height: 150%;
+    color: rgb(0, 141, 71)
+}
+
+#about h3, #learn h3, #transliterate h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#about ul {
+    list-style-type: none;
 }
 
 img {
