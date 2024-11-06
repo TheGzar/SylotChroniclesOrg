@@ -1,8 +1,16 @@
+@font-face {
+	font-family: 'Surma';
+	src: url('./assets/fonts/Surma.eot?#iefix') format('embedded-opentype'),  url('./assets/fonts/Surma.woff') format('woff'), url('./assets/fonts/Surma.ttf')  format('truetype'), url('./assets/fonts/Surma.svg#Surma') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	unicode-range: U+A800-A82F; /* Syloti Nagri Range: http://unicode.org/charts/PDF/UA800.pdf */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Verdana', sans-serif, 'Surma';
 }
 
 body {
