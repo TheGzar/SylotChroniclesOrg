@@ -18,7 +18,7 @@ function showSection(sectionId) {
 //     document.getElementById("banglaOutput").value = input;
 // });
 
-document.querySelector('.logo').addEventListener('click', () => {
+document.querySelector('#logo').addEventListener('click', () => {
     showSection('home');
 });
 
@@ -176,3 +176,24 @@ document.getElementById("banglaText").addEventListener("input", function () {
     document.getElementById("nagriText").value = Array.from(updatedValue).map(c => banglaToNagri[c] || c).join('');
 
 });
+
+window.onscroll = function() {
+    scrollFunction()
+    console.log("Scrolled");
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    console.log("Called crollFunction()");
+    document.getElementById("navbar").style.paddingBlock = "10px";
+    document.getElementById("logo").style.fontSize = "20px";
+    document.getElementById("nav").style.fontSize = "12px";
+    document.getElementById("nav").style.marginBlock = "2px";
+
+} else {
+    document.getElementById("navbar").style.paddingBlock = "15px";
+    document.getElementById("logo").style.fontSize = "30px";
+    document.getElementById("nav").style.fontSize = "18px";
+    document.getElementById("nav").style.marginBlock = "20px";
+  }
+}
