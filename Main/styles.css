@@ -30,10 +30,11 @@ body {
 }
 
 #navbar {
+    box-shadow: none;
     position: fixed;
     top: 0;
     z-index: 3;
-    background-color: #e0f2f179;
+    background-color: #e0f2f1a8;
     width: 100%;
     padding-block: 15px;
     align-content: center;
