@@ -19,10 +19,10 @@ function showSection(sectionId) {
     document.getElementById("transliteratelink").style.color = "#66BB6A";
     document.getElementById("aboutlink").style.color = "#66BB6A";
 
-    if (sectionId == 'home') {
-        document.getElementById('transliterate').style.display = "block";
-    }
-    else {
+    if (sectionId != 'home') {
+    //     document.getElementById('transliterate').style.display = "block";
+    // }
+    // else {
         document.getElementById(sectionId + "link").style.backgroundColor = "#66BB6A";
         document.getElementById(sectionId + "link").style.color = "white";
     }

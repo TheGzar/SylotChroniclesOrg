@@ -10,22 +10,19 @@
 
 <body>
 
-    <a class="logo" onclick="showSection('home')">The Sylot Chronicles</a>
+    <div class="navbar">
+        <div id="navbar">
+            <a id="logo" onclick="showSection('home')">The Sylot Chronicles</a>
 
-    <div class="nav">
-        <a onclick="showSection('learn')">Learn</a>
-        <a onclick="showSection('transliterate')">Transliterate</a>
-        <a onclick="showSection('about')">About</a>
+            <div id="nav">
+                <a id="learnlink" onclick="showSection('learn')">Learn</a>
+                <a id="transliteratelink" onclick="showSection('transliterate')">Transliterate</a>
+                <a id="aboutlink" onclick="showSection('about')">About</a>
+            </div>
+        </div>
     </div>
 
-
-    <div class="menu-container" onclick="toggleMenu()">&#9776;</div>
-    <div class="menu-dropdown" id="menuDropdown">
-        <a onclick="showSection('learn')">Learn</a>
-        <a onclick="showSection('transliterate')">Transliterate</a>
-    </div>
-
-    
+   
     <section id="home">
         <div class="overlay"></div>
         <div class="content">
