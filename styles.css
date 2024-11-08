@@ -14,12 +14,13 @@
 }
 
 body {
-    background-color: #000000; /* Changed to black */
-    color: #FFFFFF; /* Updated text color to white for better contrast */
+    background-color: #F5F5F5; /* Light gray */
+    color: #333333; /* Dark gray text for contrast */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 
 
