@@ -14,12 +14,13 @@
 }
 
 body {
-    background-color: #FFFFFF; /* Changed to white */
-    color: #004D40; 
+    background-color: #000000; /* Changed to black */
+    color: #FFFFFF; /* Updated text color to white for better contrast */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 
 .navbar {
