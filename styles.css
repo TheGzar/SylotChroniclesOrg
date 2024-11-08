@@ -14,12 +14,13 @@
 }
 
 body {
-    background-color: #FAF3E0; /* Light beige */
-    color: #4B4B4B; /* Medium dark gray text */
+    background-color: #E3F2FD; /* Soft pastel blue */
+    color: #1E3A56; /* Dark blue text for contrast */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 
 
