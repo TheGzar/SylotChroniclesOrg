@@ -145,7 +145,11 @@ footer {
     margin: auto;
     line-height: 1.8;
     text-align: justify;
-    word-spacing: -3px; 
+    word-spacing: normal; /* Change this to 'normal' or adjust as needed */
+    hyphens: auto; /* Optional: helps with word breaking */
+    overflow-wrap: break-word;
+}
+
 }
 
 #transliterate {
