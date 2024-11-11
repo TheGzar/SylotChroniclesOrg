@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thegzar.github.io/SylotChroniclesOrg/sitemap.xml
